@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?><!--加入外層的RelativeLayout設定-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="songsongsong.hahaha.ItemActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/item_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#BDBDBD"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_margin="2sp"
+                    android:background="@drawable/rectangle_drawable"
+                    android:padding="6sp"
+                    android:text="@string/Title"
+                    android:textAppearance="?android:attr/textAppearance" />
+
+                <EditText
+                    android:id="@+id/title_text"
+                    android:layout_margin="2sp"
+                    android:background="@drawable/rectangle_drawable"
+                    android:hint="@string/Title"
+                    android:padding="6sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="200sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="2sp"
+                    android:background="@drawable/rectangle_drawable"
+                    android:padding="6sp"
+                    android:text="@string/content"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/content_text"
+                    android:layout_height="200sp"
+                    android:layout_gravity="top"
+                    android:layout_margin="2sp"
+                    android:background="@drawable/rectangle_drawable"
+                    android:hint="@string/EnterContent"
+                    android:padding="6sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <!--顯示圖片-->
+            <ImageView
+                android:id="@+id/picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2sp"
+                android:background="@drawable/rectangle_drawable"
+                android:padding="6sp"
+                android:visibility="invisible" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                tools:ignore="UselessParent">
+
+                <TableRow>
+
+                    <ImageButton
+                        android:id="@+id/take_picture"
+                        android:contentDescription="@string/Desc"
+                        android:onClick="clickFunction"
+                        android:src="@drawable/take_picture_icon" />
+
+                    <ImageButton
+                        android:id="@+id/record_sound"
+                        android:contentDescription="@string/Desc"
+                        android:onClick="clickFunction"
+                        android:src="@drawable/record_sound_icon" />
+
+                    <ImageButton
+                        android:id="@+id/set_location"
+                        android:contentDescription="@string/Desc"
+                        android:onClick="clickFunction"
+                        android:src="@drawable/location_icon" />
+
+                    <ImageButton
+                        android:id="@+id/set_alarm"
+                        android:contentDescription="@string/Desc"
+                        android:onClick="clickFunction"
+                        android:src="@drawable/alarm_icon" />
+
+                    <ImageButton
+                        android:id="@+id/select_color"
+                        android:contentDescription="@string/Desc"
+                        android:onClick="clickFunction"
+                        android:src="@drawable/select_color_icon" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                tools:ignore="UselessParent">
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/cancel_item"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_margin="2sp"
+                        android:onClick="onSubmit"
+                        android:padding="6sp"
+                        android:text="@android:string/cancel"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Button
+                        android:id="@+id/ok_item"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_margin="2sp"
+                        android:onClick="onSubmit"
+                        android:padding="6sp"
+                        android:text="@android:string/ok"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+            </TableLayout>
+        </TableLayout>
+    </ScrollView>
+
+    <!--在右下角顯示照片縮圖-->
+    <!--使用android:transitionName 設定 shared element 名稱-->
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="64sp"
+        android:layout_height="64sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/rectangle_drawable"
+        android:padding="3sp"
+        android:layout_margin="6sp"
+        android:visibility="invisible"
+        android:transitionName="picture"
+        android:onClick="clickPicture"/>
+    <!--最外層的RelativeLayout結束標籤-->
+</RelativeLayout>

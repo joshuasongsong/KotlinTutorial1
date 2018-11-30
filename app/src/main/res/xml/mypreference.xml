@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--預設顏色-->
+    <!--key:設定資料名稱-->
+    <!--title:設定畫面上顯示的標題-->
+    <!--summary設定畫面上顯示的說明-->
+    <Preference
+        android:key="DEFAULT_COLOR"
+        android:title="@string/defaultColor"
+        android:summary="@string/defaultColorSummary">
+
+        <!--啟動選擇顏色文件-->
+        <intent
+            android:action="songsongsong.CHOOSE_COLOR"
+            android:targetPackage="songsongsong.hahaha"
+            android:targetClass="songsongsong.hahaha.ColorActivity"/>
+    </Preference>
+
+    <!--預設提醒時間-->
+    <!--entries:設定畫面顯示選項內容的陣列資源-->
+    <!--entriyValues:設定儲存選項資料的陣列資源-->
+    <!--defaultValue:設定選項預設項目編號-->
+    <ListPreference
+        android:key="NOTIFY_MINUTES"
+        android:title="@string/defaultNotify"
+        android:summary="@string/defaultColorSummary"
+        android:entries="@array/notifyMinutesArray"
+        android:entryValues="@array/notiifyMnutesValueArray"
+        android:defaultValue="5">
+    </ListPreference>
+
+</PreferenceScreen>

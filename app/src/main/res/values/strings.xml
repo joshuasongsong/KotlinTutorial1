@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">ha</string>
+    <string name="SEARCH">SEARCH</string>
+    <string name="ADD">ADD</string>
+    <string name="REVERT">REVERT</string>
+    <string name="DELETE">DELETE</string>
+    <string name="Hello_HAHAHA">HelloHAHAHA</string>
+    <string name="aboutTextViewOnClick">這是Android Tutorial應用程式</string>
+    <string name="version">版本:AndroidTutorial_0.2.4</string>
+    <string name="Title">標題</string>
+    <string name="EnterTitle">輸入標題</string>
+    <string name="content">內容</string>
+    <string name="EnterContent">輸入內容</string>
+    <string name="Desc">敘述敘述</string>
+    <string name="delete">刪除</string>
+    <string name="DeleteMessage">確定要刪除%1$d個項目?</string>
+    <string name="defaultColor">預設的顏色</string>
+    <string name="defaultColorSummary">新增記事的預設顏色</string>
+    <string name="defaultNotify">預設提醒時間</string>
+    <string name="defaultNotifySummary">在指定的時間之前通知</string>
+    <string name="TitleSetting">setting</string>
+    <string name="write_external_storage_denied">沒有寫入外部儲存設備授權</string>
+    <string name="title_Record">語音備忘</string>
+    <string name="title_play">播放語音備忘</string>
+    <string name="record_play">播放</string>
+    <string name="record_new">重新錄製</string>
+    <string name="record_audio_deniied">沒有錄音設備授權</string>
+
+    <string-array name="notifyMinutesArray">
+        <item>五分鐘</item>
+        <item>十分鐘</item>
+        <item>二十分鐘</item>
+        <item>三十分鐘</item>
+        <item>六十分鐘</item>
+    </string-array>
+
+    <string-array name="notiifyMnutesValueArray">
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>60</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+</resources>
